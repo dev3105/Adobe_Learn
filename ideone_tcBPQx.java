@@ -17,6 +17,5 @@ class Solution{
             dp[i]=((i-1)*(dp[i-1]+dp[i-2]))% mod;
         }
         return dp[N];
-        
     }
 }
