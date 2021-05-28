@@ -1,0 +1,23 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Solution{
+    static long disarrange(int N)
+    {
+        long mod=1000000007;
+        long[] dp=new long[N+1];
+        dp[0]=0;
+        dp[1]=0;
+        dp[2]=1;
+        for(int i=3;i<=N;i++)
+        {
+            dp[i]=((i-1)*(dp[i-1]+dp[i-2]))% mod;
+        }
+        return dp[N];
+        
+    }
+}
